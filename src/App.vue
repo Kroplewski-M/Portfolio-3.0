@@ -1,7 +1,12 @@
 <template>
-<p class="text-red-700">Hello</p>
+<Nav></Nav>
+
 </template>
-<script>
+
+<script setup>
+import Nav from '@/components/nav.vue';
+
+
 </script>
 
 
