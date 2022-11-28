@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <nav class="w-[100%] h-[80px] bg-[#1E1E1E] flex relative">
+  <nav class="w-[100vw] h-[80px] bg-[#1E1E1E] flex relative">
     <img
       src="@/assets/images/logo.png"
       alt="logo"
