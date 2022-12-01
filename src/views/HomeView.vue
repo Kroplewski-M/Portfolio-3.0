@@ -16,9 +16,3 @@ const projectStore = useProjectStore();
 
 console.log(projectStore.projects);
 </script>
-
-<style>
-body{
-    overflow-y: hidden;
-}
-</style>
