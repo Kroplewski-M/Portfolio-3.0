@@ -1,7 +1,7 @@
 <template>
     <section class="w-[100vw] h-[300px] bg-[url('../assets/images/skillsBackground.jpg')] bg-cover pt-[60px]">
         <div class="w-[80%] h-[60%] bg-[#111111]/80 mx-auto rounded-md">
-          <p class="text-center md:text-[70px] text-[35px] pt-10 md:pt-0 font-['Impact'] pt-[20px] text-gray-200">Skills&Projects</p>
+          <p class="text-center md:text-[70px] text-[35px] pt-10 md:pt-5 font-['Impact'] pt-[20px] text-gray-200">Skills&Projects</p>
         </div>
     </section>
     <section class="w-[100vw] pb-10 bg-[#1E1E1E] pt-10">
@@ -30,8 +30,11 @@
         <div class="md:w-[80%] w-[90%] h-[90%] bg-[#111111] mx-auto rounded-md">
             <p class="text-gray-200 underline text-[50px] font-semibold text-center">Projects</p>
             <div class="flex flex-wrap mx-auto xl:w-[1200px] w-[310px] mt-10">
-                <div v-for="project in projectStore.projects" class="md:w-[300px] w-[250px] h-[400px] bg-[#1E1E1E] rounded-md mb-5 mx-auto md:ml-10 md:mr-0">
-                   
+                <div v-for="project in projectStore.projects" class="md:w-[300px] w-[250px] h-[400px] bg-[#1E1E1E] rounded-md mb-5 mx-auto md:ml-10 md:mr-0 hover:cursor-pointer hover:scale-105">
+                   <img :src="project.imgName" alt="" class="w-[100%] h-[170px] rounded-t-md">
+                   <p class="text-gray-200 font-semibold underline text-center text-[20px] pt-[10px]">{{project.Name}}</p>
+                   <p class="text-gray-400 mt-[5px]">Stack: {{project.stack}}</p>
+                   <p class="text-gray-400 pt-[5px] leading-relaxed	">Description: {{project.projectDesc}}</p>
                 </div>
             </div>
         </div>
@@ -41,8 +44,6 @@
 <script setup>
 import {useProjectStore} from '@/stores/projectStore.js';
 
-
 const projectStore = useProjectStore();
-console.log(projectStore.projects);
 
 </script>
