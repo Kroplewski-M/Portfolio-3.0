@@ -4,4 +4,12 @@
           <p class="text-center md:text-[70px] text-[35px] pt-10 md:pt-5 font-['Impact'] pt-[20px] text-gray-200">Contact</p>
         </div>
     </section>
+    <section class="w-[100vw] h-[70vh] bg-[#1E1E1E]">
+      <contactForm></contactForm>
+    </section>
 </template>
+
+<script setup>
+import contactForm from '../components/contactForm.vue';
+
+</script>
