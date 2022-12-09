@@ -30,11 +30,15 @@
         <div class="md:w-[80%] w-[90%] h-[90%] bg-[#111111] mx-auto rounded-md">
             <p class="text-gray-200 underline text-[50px] font-semibold text-center">Projects</p>
             <div class="flex flex-wrap mx-auto xl:w-[1200px] w-[310px] mt-10">
-                <div v-for="project in projectStore.projects" class="md:w-[300px] w-[250px] h-[400px] bg-[#1E1E1E] rounded-md mb-5 mx-auto md:ml-10 md:mr-0 hover:cursor-pointer hover:scale-105">
+                <div v-for="project in projectStore.projects" class="md:w-[300px] w-[250px] h-[400px] bg-[#1E1E1E] rounded-md mb-5 mx-auto md:ml-10 relative md:mr-0 hover:cursor-pointer hover:scale-105">
                    <img :src="project.imgName" alt="" class="w-[100%] h-[170px] rounded-t-md">
                    <p class="text-gray-200 font-semibold underline text-center text-[20px] pt-[10px]">{{project.Name}}</p>
-                   <p class="text-gray-400 mt-[5px]">Stack: {{project.stack}}</p>
-                   <p class="text-gray-400 pt-[5px] leading-relaxed	">Description: {{project.projectDesc}}</p>
+                   <p class="text-gray-400 mt-[5px] pl-[5px]">Stack: {{project.stack}}</p>
+                   <p class="text-gray-400 pt-[5px] leading-relaxed	w-[80%] pl-[5px]">Description: {{project.projectDesc}}</p>
+                   <div class="flex absolute bottom-2 right-5">
+                    <a :href="project.gitHub" target="_blank"><img src="@/assets/images/socials/github.png" class="w-[30px] hover:cursor-pointer mr-[10px]"></a>
+                    <a :href="project.web" target="_blank" v-if="project.web != ''"><img src="@/assets/images/socials/internet.png" class="w-[30px] hover:cursor-pointer"></a>
+                   </div>
                 </div>
             </div>
         </div>

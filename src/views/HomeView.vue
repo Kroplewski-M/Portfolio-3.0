@@ -3,7 +3,7 @@
     <p class=" text-[70px] text-center text-gray-200 font-['Impact'] pt-[100px]">Hi, Im Mateusz</p>
     <p class="text-center text-gray-400 font-bold text-[20px]">A web Developer</p>
     <div class="w-[200px] mx-auto">
-        <button class="w-[100%] h-[40px] bg-gray-200 mt-16 rounded-md hover:bg-gray-300 font-bold">Get in touch</button>
+        <button class="w-[100%] h-[40px] bg-gray-200 mt-16 rounded-md hover:bg-gray-300 font-bold" @click.prevent="this.$router.push('/Contact')">Get in touch</button>
     </div>
 </div>
 </template>
