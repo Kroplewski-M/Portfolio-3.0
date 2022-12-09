@@ -8,6 +8,11 @@
       <div class="w-[300px] text-center pt-10 mx-auto md:mx-0">
         <h1 class="text-[30px] text-gray-200 font-['Impact']">Send me a message  →</h1>
         <h1 class="text-[25px] text-gray-400 font-['Impact'] mt-5"> Or reach me here  ↓</h1>
+        <div class="flex w-[100px] mx-auto mt-10">
+          <a href="https://github.com/Kroplewski-M" target="_blank"><img src="@/assets/images/socials/github.png" class="w-[50px] hover:cursor-pointer"></a>
+          <a href="https://www.linkedin.com/in/mateusz-kroplewski-732239176/" target="_blank"><img src="@/assets/images/socials/in.png" class="w-[50px] hover:cursor-pointer"></a>
+
+        </div>
       </div>
       <div>
         <contactForm></contactForm>

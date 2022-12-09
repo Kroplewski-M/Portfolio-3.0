@@ -5,7 +5,7 @@
       src="@/assets/images/logo.png"
       alt="logo"
       class="w-[80px] ml-[10px] hover:cursor-pointer"
-    />
+      @click.prevent="this.$router.push('/')"/>
     <div
       class="flex text-gray-200 font-semibold md:space-x-10 md:text-[18px] md:absolute md:right-10 md:mt-[25px] md:visible z-50"
       :class="[
@@ -14,10 +14,10 @@
           : 'invisible',
       ]"
     >
-      <a href="#" class="hover:underline">Home</a>
-      <a href="#" class="hover:underline">About</a>
-      <a href="#" class="hover:underline">Skills&Projects</a>
-      <a href="#" class="hover:underline">Contact</a>
+      <a href="#" class="hover:underline" @click.prevent="this.$router.push('/')">Home</a>
+      <a href="#" class="hover:underline" @click.prevent="this.$router.push('/About')">About</a>
+      <a href="#" class="hover:underline" @click.prevent="this.$router.push('/SkillsProjects')">Skills&Projects</a>
+      <a href="#" class="hover:underline" @click.prevent="this.$router.push('/Contact')">Contact</a>
     </div>
     <!-- Mobile Menu -->
     <div class="mt-[25px] absolute right-10 visible md:invisible">
