@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <nav class="w-[100vw] h-[80px] bg-[#1E1E1E] flex relative">
+  <nav class="w-[100vw] h-[80px] bg-[#1E1E1E] flex relative z-50">
     <img
       src="@/assets/images/logo.png"
       alt="logo"
@@ -14,10 +14,10 @@
           : 'invisible',
       ]"
     >
-      <a href="#" class="hover:underline" @click.prevent="this.$router.push('/')">Home</a>
-      <a href="#" class="hover:underline" @click.prevent="this.$router.push('/About')">About</a>
-      <a href="#" class="hover:underline" @click.prevent="this.$router.push('/SkillsProjects')">Skills&Projects</a>
-      <a href="#" class="hover:underline" @click.prevent="this.$router.push('/Contact')">Contact</a>
+      <a href="#" class="hover:underline" @click.prevent="showMobileMenu = false, this.$router.push('/')">Home</a>
+      <a href="#" class="hover:underline" @click.prevent="showMobileMenu = false, this.$router.push('/About')">About</a>
+      <a href="#" class="hover:underline" @click.prevent="showMobileMenu = false, this.$router.push('/SkillsProjects')">Skills&Projects</a>
+      <a href="#" class="hover:underline" @click.prevent="showMobileMenu = false, this.$router.push('/Contact')">Contact</a>
     </div>
     <!-- Mobile Menu -->
     <div class="mt-[25px] absolute right-10 visible md:invisible">

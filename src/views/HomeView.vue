@@ -7,12 +7,3 @@
     </div>
 </div>
 </template>
-
-
-<script setup>
-import {useProjectStore} from '@/stores/projectStore';
-
-const projectStore = useProjectStore();
-
-console.log(projectStore.projects);
-</script>
