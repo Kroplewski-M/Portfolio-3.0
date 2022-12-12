@@ -14,10 +14,10 @@
           : 'invisible',
       ]"
     >
-      <a href="#" class="hover:underline" @click.prevent="showMobileMenu = false, this.$router.push('/')">Home</a>
-      <a href="#" class="hover:underline" @click.prevent="showMobileMenu = false, this.$router.push('/About')">About</a>
-      <a href="#" class="hover:underline" @click.prevent="showMobileMenu = false, this.$router.push('/SkillsProjects')">Skills&Projects</a>
-      <a href="#" class="hover:underline" @click.prevent="showMobileMenu = false, this.$router.push('/Contact')">Contact</a>
+      <p class="hover:underline hover:cursor-pointer" @click.prevent="showMobileMenu = false, this.$router.push('/')">Home</p>
+      <p class="hover:underline hover:cursor-pointer" @click.prevent="showMobileMenu = false, this.$router.push('/About')">About</p>
+      <p class="hover:underline hover:cursor-pointer" @click.prevent="showMobileMenu = false, this.$router.push('/SkillsProjects')">Skills&Projects</p>
+      <p class="hover:underline hover:cursor-pointer" @click.prevent="showMobileMenu = false, this.$router.push('/Contact')">Contact</p>
     </div>
     <!-- Mobile Menu -->
     <div class="mt-[25px] absolute right-10 visible md:invisible">
