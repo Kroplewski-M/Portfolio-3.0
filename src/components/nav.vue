@@ -5,7 +5,7 @@
       src="@/assets/images/logo.png"
       alt="logo"
       class="w-[80px] ml-[10px] hover:cursor-pointer"
-      @click.prevent="this.$router.push('/')"/>
+      @click.prevent="home()"/>
     <div
       class="flex text-gray-200 font-semibold md:space-x-10 md:text-[18px] md:absolute md:right-10 md:mt-[25px] md:visible z-50"
       :class="[
@@ -14,10 +14,10 @@
           : 'invisible',
       ]"
     >
-      <p class="hover:underline hover:cursor-pointer" @click.prevent="showMobileMenu = false, this.$router.push('/')">Home</p>
-      <p class="hover:underline hover:cursor-pointer" @click.prevent="showMobileMenu = false, this.$router.push('/About')">About</p>
-      <p class="hover:underline hover:cursor-pointer" @click.prevent="showMobileMenu = false, this.$router.push('/SkillsProjects')">Skills&Projects</p>
-      <p class="hover:underline hover:cursor-pointer" @click.prevent="showMobileMenu = false, this.$router.push('/Contact')">Contact</p>
+      <p class="hover:underline hover:cursor-pointer" @click.prevent="showMobileMenu = false, home()">Home</p>
+      <p class="hover:underline hover:cursor-pointer" @click.prevent="showMobileMenu = false, about()">About</p>
+      <p class="hover:underline hover:cursor-pointer" @click.prevent="showMobileMenu = false, projects()">Skills&Projects</p>
+      <p class="hover:underline hover:cursor-pointer" @click.prevent="showMobileMenu = false, contact()">Contact</p>
     </div>
     <!-- Mobile Menu -->
     <div class="mt-[25px] absolute right-10 visible md:invisible">
@@ -44,6 +44,20 @@
 
 <script setup>
 import { ref } from "vue";
-
 let showMobileMenu = ref(false);
+
+function home(){
+  window.location.href = '/';
+}
+function about(){
+  window.location.href = '/About';
+
+}
+function projects(){
+  window.location.href = '/SkillsProjects';
+
+}
+function contact(){
+  window.location.href = '/Contact';
+}
 </script>
