@@ -30,8 +30,8 @@
         <div class="md:w-[80%] w-[90%] h-[90%] bg-[#111111] mx-auto rounded-md">
             <p class="text-gray-200 underline text-[50px] font-semibold text-center">Projects</p>
             <div class="flex flex-wrap mx-auto xl:w-[1200px] w-[310px] mt-10">
-                <div v-for="project in projectStore.projects" class="md:w-[300px] w-[250px] h-[400px] bg-[#1E1E1E] rounded-md mb-5 mx-auto md:ml-10 relative md:mr-0 hover:cursor-pointer hover:scale-105">
-                   <img :src="'./src/assets/images/projects/'+project.imgName" alt="" class="w-[100%] h-[170px] rounded-t-md">
+                <div v-for="(project, index) in projectStore.projects" class="md:w-[300px] w-[250px] h-[400px] bg-[#1E1E1E] rounded-md mb-5 mx-auto md:ml-10 relative md:mr-0 hover:cursor-pointer hover:scale-105">
+                   <img :src="project.ImgName" alt="" class="w-[100%] h-[170px] rounded-t-md">
                    <p class="text-gray-200 font-semibold underline text-center text-[20px] pt-[10px]">{{project.Name}}</p>
                    <p class="text-gray-400 mt-[5px] pl-[5px]">Stack: {{project.stack}}</p>
                    <p class="text-gray-400 pt-[5px] leading-relaxed	w-[80%] pl-[5px]">Description: {{project.projectDesc}}</p>
@@ -49,5 +49,17 @@
 import {useProjectStore} from '@/stores/projectStore.js';
 
 const projectStore = useProjectStore();
+
+const imageUrl1 = new URL('../assets/images/projects/blogger.png', import.meta.url).href;
+const imageUrl2 = new URL('../assets/images/projects/cinemax.png', import.meta.url).href;
+const imageUrl3 = new URL('../assets/images/projects/tunes.png', import.meta.url).href;
+const imageUrl4 = new URL('../assets/images/projects/talkToMat.png', import.meta.url).href;
+const imageUrl5 = new URL('../assets/images/projects/weightTracker.png', import.meta.url).href;
+
+projectStore.projects[0].ImgName = imageUrl1;
+projectStore.projects[1].ImgName = imageUrl2;
+projectStore.projects[2].ImgName = imageUrl3;
+projectStore.projects[3].ImgName = imageUrl4;
+projectStore.projects[4].ImgName = imageUrl5;
 
 </script>
